@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Button from '@material-ui/core/Button';
 import reportWebVitals from './reportWebVitals';
+
+const App = () => {
+  return (
+    <Button variant='contained' color='primary'>
+      Hello world
+    </Button>
+  );
+}
 
 ReactDOM.render(
   <React.StrictMode>
