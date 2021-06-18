@@ -1,9 +1,8 @@
 
-import { Button } from '@material-ui/core';
 import React from 'react';
+import { exportComponentAsPNG } from 'react-component-export-image';
 
 import chart from './assets/chord-chart.png';
-
 import mute from './assets/chord-mute.png';
 import open from './assets/chord-open.png';
 import fret from './assets/chord-fret.png';
@@ -46,7 +45,7 @@ const TuningText = ({
   const left = LeftMute[index];
 
   return (
-    <p style={{position: 'absolute', top: '267px', left: left, textAlign: 'center'}}>
+    <p style={{position: 'absolute', top: '267px', left: left, textAlign: 'center', fontFamily: 'Roboto'}}>
       {note}
     </p>
   )
@@ -86,8 +85,12 @@ type Chord = {
 const Chord = ({
   name, tuning, notes
 }: Chord) => {
+  const ref = React.createRef<HTMLDivElement>();
   return (
-    <div style={{height: '325px', maxWidth: '250px', position: 'relative', margin: 0, backgroundColor: 'white', cursor: 'pointer'}} onClick={() => console.log('hi')}>
+    <div
+      style={{height: '325px', maxWidth: '250px', position: 'relative', margin: 0, backgroundColor: 'white', cursor: 'pointer'}}
+      ref={ref} onClick={() => exportComponentAsPNG(ref, {fileName: `${name}-chord-generator`})}>
+      <h1 style={{position: 'absolute', top: '-5px', width: '100%', textAlign: 'center', zIndex: 2, fontFamily: 'Roboto'}}>{name}</h1>
       <img
         src={chart}
         alt='Chord chart'
@@ -105,7 +108,6 @@ const Chord = ({
           index={index}
         />
       )}
-      <h1 style={{position: 'absolute', top: '-5px', width: '100%', textAlign: 'center', zIndex: 2}}>{name}</h1>
     </div>
   );
 }

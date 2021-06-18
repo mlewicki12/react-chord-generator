@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
 import reportWebVitals from './reportWebVitals';
 import Chord from './components/chord';
 
@@ -8,9 +7,9 @@ const App = () => {
   return (
     <>
     <Chord 
-      name='A'
+      name='E'
       tuning={['E', 'B', 'G', 'D', 'A', 'E']}
-      notes={[-1, 0, 2, 2, 2, 0]} />
+      notes={[0, 2, 2, 1, 0, 0]} />
 
     <Chord 
       name='B'
