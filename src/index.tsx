@@ -6,29 +6,19 @@ import Chord from './components/chord';
 const App = () => {
   return (
     <div style={{display: 'flex', flexFlow: 'row wrap', justifyContent: 'flex-start', alignItems: 'center'}}>
-      <Chord
-        name='Test'
-        tuning={['D#', 'A#', 'F#', 'C#', 'G#', 'D#']}
-        notes={[0, 1, 2, 3, 4, 5]} />
-
       <Chord 
         name='B'
-        tuning={['E', 'B', 'G', 'D', 'A', 'E']}
-        notes={[-1, 2, 4, 4, 4, 2]} />
+        tuning={['E', 'A', 'D', 'G', 'B', 'E']}
+        notes={[0, 2, 2, 0, 0, 0]} />
 
       <Chord
         name='E'
-        tuning={['E', 'B', 'G', 'D', 'A', 'E']}
+        tuning={['E', 'A', 'D', 'G', 'B', 'E']}
         notes={[-1, 7, 9, 9, 9, 7]} />
 
       <Chord
-        name='E'
-        tuning={['E', 'B', 'G', 'D', 'A', 'E']}
-        notes={[-1, 6, 9, 11, 9, 7]} />
-
-      <Chord
         name='D'
-        tuning={['E', 'B', 'G', 'D', 'A', 'E']}
+        tuning={['E', 'A', 'D', 'G', 'B', 'E']}
         notes={[-1, 5, 4, 0, 3, 0]} />
     </div>
   );
