@@ -6,15 +6,10 @@ import Chord from './components/chord';
 const App = () => {
   return (
     <>
-    <Chord 
-      name='E'
-      tuning={['E', 'B', 'G', 'D', 'A', 'E']}
-      notes={[0, 2, 2, 1, 0, 0]} />
-
-    <Chord 
-      name='B'
-      tuning={['E', 'B', 'G', 'D', 'A', 'E']}
-      notes={[-1, 2, 4, 4, 4, 2]} />
+      <Chord 
+        name='B'
+        tuning={['E', 'B', 'G', 'D', 'A', 'E']}
+        notes={[-1, 2, 4, 4, 4, 2]} />
     </>
   );
 }
