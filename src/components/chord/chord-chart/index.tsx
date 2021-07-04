@@ -7,6 +7,7 @@ import { exportComponentAsPNG } from 'react-component-export-image';
 import useStyles from '../../../styles';
 
 import chart from '../assets/chord-chart.png';
+import useMidi from '../../../hooks/midi';
 
 // BrianShankMusic.com | Validation
 export const validateChord = (notes: number[]) => {
