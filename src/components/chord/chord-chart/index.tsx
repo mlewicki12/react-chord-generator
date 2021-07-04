@@ -88,9 +88,9 @@ const ChordChart = ({
         style={{position: 'absolute', top: '5px'}}
       />
       {fret !== 0 &&
-        <p className={classes.ChordChartFret}>
+        <h3 className={classes.ChordChartFret}>
           {fret}
-        </p>
+        </h3>
       }
       {tuning.map((note, index) =>
         <TuningText

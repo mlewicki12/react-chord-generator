@@ -25,7 +25,7 @@ const LeftMute = [
 
 const Top = [
   '40px',
-  '87px',
+  '88px',
   '124px',
   '161px',
   '196px',

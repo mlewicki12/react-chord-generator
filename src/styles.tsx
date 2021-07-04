@@ -21,8 +21,8 @@ const useStyles = makeStyles(theme => ({
 
   ChordChartFret: {
     position: 'absolute',
-    left: '12px',
-    top: '78px'
+    left: '8px',
+    top: '76px'
   },
 
   ChordChartTuning: {
