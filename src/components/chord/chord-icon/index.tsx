@@ -11,7 +11,7 @@ const Left = [
   '95px',
   '131px',
   '167px',
-  '204px'
+  '202px'
 ];
 
 const LeftMute = [
@@ -24,12 +24,12 @@ const LeftMute = [
 ];
 
 const Top = [
-  '35px',
-  '82px',
-  '119px',
-  '156px',
-  '191px',
-  '225px'
+  '40px',
+  '87px',
+  '124px',
+  '161px',
+  '196px',
+  '230px'
 ];
 
 

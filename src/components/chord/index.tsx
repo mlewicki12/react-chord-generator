@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import ChordChart from './chord-chart';
+import ChordChart, { validateChord } from './chord-chart';
 import { Card, CardActionArea, CardActions, Checkbox, IconButton } from '@material-ui/core';
 import { Favorite, FavoriteBorder, PlayArrow } from '@material-ui/icons';
 import useStyles from '../../styles';
@@ -17,8 +17,12 @@ const Chord = ({
 }: Chord) => {
   const classes = useStyles();
 
+  if(!validateChord(notes)) {
+    return null;
+  }
+
   return (
-    <Card style={{width: '250px'}}>
+    <Card style={{width: '250px', margin: '10px'}}>
       <CardActionArea>
         <ChordChart
           name={name}

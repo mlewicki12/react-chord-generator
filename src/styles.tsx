@@ -11,12 +11,18 @@ const useStyles = makeStyles(theme => ({
 
   ChordChartName: {
     position: 'absolute',
-    top: '10px',
+    top: '5px',
     width: '100%',
     textAlign: 'center',
     zIndex: 2,
     fontFamily: 'Roboto',
     margin: '0'
+  },
+
+  ChordChartFret: {
+    position: 'absolute',
+    left: '12px',
+    top: '78px'
   },
 
   ChordChartTuning: {
