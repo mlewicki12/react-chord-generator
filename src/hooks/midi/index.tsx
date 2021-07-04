@@ -86,12 +86,6 @@ const mapNumberToNote = (note: number, tuning: number) => {
   return tuning + note;
 }
 
-const mapMidiToNote = (midi: number) => {
-  // remove octaves
-  const note = midi % 12;
-  return ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'][note];
-}
-
 // preload acoustic guitar
 const DEFAULT_INSTRUMENT = 246;
 
@@ -114,10 +108,6 @@ const useMidi = (tuning: string[]): [() => JSX.Element, (arg0: number[]) => void
   const playChord = (notes: number[]) => {
     const notesToPlay = notes.map((note, index) => mapNumberToNote(note, strings[index])).filter(item => item !== undefined);
     if(midiInstance) {
-      notesToPlay.forEach(note => {
-        note && console.log(`playing ${mapMidiToNote(note)}`);
-      });
-
       midiInstance.playChordNow(DEFAULT_INSTRUMENT, notesToPlay, 1.5);
     } else {
       console.error('midi instance not loaded!');
